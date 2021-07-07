@@ -1,0 +1,20 @@
+version: '3'
+services:
+  php-apache:
+    image: ${RUN_IMAGE}${PHP_VERSION:-""}
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        BASE_IMAGE: ${BASE_IMAGE}
+        PHP_VERSION: ${PHP_VERSION:-""}
+    environment:
+      DBHOST: "172.16.91.110"
+      DBPORT: "2001"
+      DBUSER: "root"
+      DBPASSWD: "postgresql"
+    container_name: php-apache
+    hostname: php-apache
+    restart: unless-stopped
+    #env_file:
+    #  - ./config/${ENV}.env
