@@ -19,6 +19,7 @@ docker build --build-arg BASE_IMAGE=ubuntu:18.04 --build-arg PHP_VERSION=8.0 -t 
 ```
 docker-compose build
 docker-compose build --no-cache
+docker-compose build --build-arg BASE_IMAGE=ubuntu:18.04 --build-arg PHP_VERSION=8.0
 
 ```
 
