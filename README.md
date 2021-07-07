@@ -15,6 +15,13 @@
 docker build --build-arg BASE_IMAGE=ubuntu:18.04 --build-arg PHP_VERSION=8.0 -t php:apache8.0 .
 ```
 
+### 使用compose build image
+```
+docker-compose build
+docker-compose build --no-cache
+
+```
+
 ### 查看設定檔
 ```
 docker-compose config
