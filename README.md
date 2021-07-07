@@ -1,23 +1,19 @@
-### env 用途
-- 傳參數到docker build
-- container 環境變數使用
+## 主要功能
+- 演示使用env 帶變數
+  - .env
+  - env_file
 
-### docker build 進階
+### env 用途
+- .env
+  - 傳參數到docker build
+- env_file
+  - container 環境變數使用
+
+### 補充 docker build 傳參數
 - 傳參數
 ```
-docker build --build-arg BASE_IMAGE=ubuntu:18.04 --build-arg ANSIBLE_VERSION=2.9 -t test .
+docker build --build-arg BASE_IMAGE=ubuntu:18.04 --build-arg PHP_VERSION=8.0 -t php:apache8.0 .
 ```
-
-### docker-compose 使用.env 當作設定檔來源
-
-### 可強制指定env file
-- 格式
-```
-web:
-  env_file:
-    - env-file.env
-```
-
 
 ### 查看設定檔
 ```
