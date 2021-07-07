@@ -38,3 +38,13 @@ export ENV=beta
 ### 永久套用
 - 修改 `/etc/environment`
 - 透過修改，看index.php的變化
+
+
+
+### 範例流程說明
+- docker-compose 的 environment 區塊聲明 
+- env-file 的檔案聲明
+  - 顯示聲明
+  - 環境變數式聲明
+
+
