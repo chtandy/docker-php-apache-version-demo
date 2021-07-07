@@ -4,9 +4,14 @@ FROM ${BASE_IMAGE}
 ARG DEBIAN_FRONTEND=noninteractive 
 ARG PHP_VERSION
 ARG php_ver=${PHP_VERSION:-""}
+#安裝apt-transport-https（確保APT可以在HTTPS中執行）、lsb-release（識別系統的Linux發行版的版本）及ca-certificates（CA憑證工具）
+RUN apt-get update && apt-get install wget apt-transport-https lsb-release ca-certificates -y
+#加入packages.sury.org的GPG key
+RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+#將packages.sury.org寫入至Debian的sources list套件來源清單
+RUN echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/php.list
 
-RUN apt-get update && apt-get install software-properties-common -y
-RUN add-apt-repository ppa:ondrej/php
+#更新sources list清單
 RUN apt-get update
 RUN apt-get install apache2 -y
 RUN apt-get install php${php_ver} -y
