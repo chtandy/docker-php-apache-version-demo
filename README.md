@@ -20,7 +20,7 @@ docker build --build-arg BASE_IMAGE=ubuntu:18.04 --build-arg PHP_VERSION=8.0 -t 
 docker-compose build
 docker-compose build --no-cache
 ```
-### 使用compose build image 傳參數
+### 使用compose build image 傳參數, 不使用 .env 檔案的值
 ```
 docker-compose build --build-arg BASE_IMAGE=ubuntu:18.04 --build-arg PHP_VERSION=8.0
 ```
