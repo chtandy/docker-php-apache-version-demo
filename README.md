@@ -3,6 +3,8 @@
   - .env
   - env_file
 
+- 透過`/etc/environment`,如何達到全環境統一
+
 ### env 用途
 - .env
   - 傳參數到docker build
