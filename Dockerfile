@@ -13,6 +13,6 @@ RUN apt-get install php${php_ver} -y
 RUN apt-get install php${php_ver}-common php-json php${php_ver}-gd php${php_ver}-cli php${php_ver}-mbstring php${php_ver}-xml php${php_ver}-opcache php${php_ver}-mysql -y
 
 RUN . /etc/apache2/envvars
-LABEL OS="ubuntu18.04" app="php,apache" maintainer="cht.andy@gmail.com" webserver="apache"
+LABEL OS=${BASE_IMAGE} app="php,apache" maintainer="cht.andy@gmail.com" webserver="apache"
 COPY ./html/ /var/www/html/
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
