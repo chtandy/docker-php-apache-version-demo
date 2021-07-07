@@ -1,0 +1,12 @@
+version: '3'
+services:
+  php-apache:
+    image: ${RUN_IMAGE}-${PHP_VERSION}:${IMAGE_TAG}
+    container_name: php-apache
+    hostname: php-apache
+    restart: always
+    env_file:
+      - ./config/${ENV}.env
+    ports:
+      - "1080:80"
+      - "8443:443"
