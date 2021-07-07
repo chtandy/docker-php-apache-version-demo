@@ -35,3 +35,4 @@ export ENV=beta
 ```
 ### 永久套用
 - 修改 `/etc/environment`
+- 透過修改，看index.php的變化
