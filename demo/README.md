@@ -1,5 +1,5 @@
 ### 最佳實踐
-- docker dockerfile layer
+- dockerfile layer
   - 優化
     - base image layer
     - code layer
