@@ -17,7 +17,7 @@ services:
     hostname: php-apache
     restart: unless-stopped
     env_file:
-      - ./config/${ENV}.env
+      - ./config/beta.env
     ports:
       - "1080:80"
       - "8443:443"
