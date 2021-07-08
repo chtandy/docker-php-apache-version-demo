@@ -1,4 +1,8 @@
 ### 最佳實踐
+- docker dockerfile layer
+  - 優化
+    - base image layer
+    - code layer
 - docker image build
 ```
 docker-compose -f build.yml build
